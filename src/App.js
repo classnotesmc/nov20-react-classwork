@@ -1,11 +1,19 @@
 import React from 'react';
 
-function App() {
-  const name="Sue"
+function Welcome(props) {
+  return <h1>Hello, {props.name}</h1>;
+}
 
+function App() {
   return (
-      <h1>Hello {name}!</h1>
+      <div>
+        <Welcome
+            name="Sue"
+        />
+      </div>
   );
 }
 
 export default App;
+
+
