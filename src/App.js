@@ -1,10 +1,11 @@
 import React from 'react';
 
 function Greetings(props) {
-  return (
-        <h3 style={{color: 'red'}}>{props.greet}, {props.name}!
-        Would you like some {props.food}?</h3>
-  );
+  const colorObj = {};
+  colorObj.color = props.color;
+    return (
+        <h3 style={colorObj}>{props.greet}, {props.name}!</h3>
+    );
 }
 
 function App() {
@@ -13,12 +14,11 @@ function App() {
         <Greetings
           greet="Hello"
           name="Sue"
-          food="apples"
+          color="blue"
         />
         <Greetings
           greet="Goodbye"
           name="Sue"
-          food="apples"
           />
       </div>
   );
