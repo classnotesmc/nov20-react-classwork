@@ -1,25 +1,25 @@
 import React from 'react';
 
-function Welcome(props) {
-  return <h1>Hello, {props.name}!</h1>;
-}
-
-function Goodbye(props) {
-  return <h1>Goodbye, {props.name}!</h1>;
+function Greetings(props) {
+  return (
+        <h3 style={{color: 'red'}}>{props.greet}, {props.name}!
+        Would you like some {props.food}?</h3>
+  );
 }
 
 function App() {
   return (
       <div>
-        <Welcome
-            name="Sue"
-        />
-        <Goodbye
+        <Greetings
+          greet="Hello"
           name="Sue"
+          food="apples"
         />
-        <Goodbye
-            name="Bob"
-        />
+        <Greetings
+          greet="Goodbye"
+          name="Sue"
+          food="apples"
+          />
       </div>
   );
 }
